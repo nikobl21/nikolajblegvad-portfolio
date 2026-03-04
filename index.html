@@ -397,84 +397,76 @@ footer { background: var(--black); color: var(--white); padding: 1.5rem 2rem; di
     <button class="filter-btn" data-filter="reportasje">Reportasje</button>
   </div>
 
-  <!--
-  ═══════════════════════════════════════════════════════
-  SLIK LEGGER DU TIL ET NYTT BILDE:
+<!--
+═══════════════════════════════════════════════════════
+SLIK LEGGER DU TIL ET NYTT BILDE:
 
-  1. Kopier en <div class="p-item"> nedenfor
-  2. Bytt data-cat til kategori (dokumentar/portrett/musikk/reportasje)
-  3. Bytt data-src til filstien for bildet ditt, f.eks. "bilder/konsert.jpg"
-  4. Bytt data-title og p-name til tittel på bildet
-  5. Last opp bildefilen til bilder/-mappen på serveren
+1. Kopier blokken nedenfor
+2. Bytt data-cat til kategori (dokumentar/portrett/musikk/reportasje)
+3. Bytt data-src og img src til filstien for bildet ditt
+4. Bytt data-title, alt, p-cat og p-name til tittel på bildet
+5. Last opp bildefilen til bilder/-mappen i GitHub
 
-  Eksempel på ferdig blokk med ekte bilde:
-  <div class="p-item" data-cat="musikk" data-src="bilder/konsert-oslo-2024.jpg" data-title="Konsert, Oslo 2024">
-    <img src="bilder/konsert-oslo-2024.jpg" class="p-photo-bg" style="object-fit:cover" alt="Konsert Oslo 2024">
-    <div class="p-hover">
-      <span class="p-cat">Musikk</span>
-      <div class="p-name">Konsert, Oslo 2024</div>
-      <span class="p-zoom">⊕ Åpne</span>
-    </div>
+<div class="p-item" data-cat="musikk" data-src="bilder/konsert-oslo-2024.jpg" data-title="Konsert, Oslo 2024">
+  <img src="bilder/konsert-oslo-2024.jpg" class="p-photo-bg" style="object-fit:cover" alt="Konsert Oslo 2024">
+  <div class="p-hover">
+    <span class="p-cat">Musikk</span>
+    <div class="p-name">Konsert, Oslo 2024</div>
+    <span class="p-zoom">⊕ Åpne</span>
   </div>
-  ═══════════════════════════════════════════════════════
-  -->
+</div>
+═══════════════════════════════════════════════════════
+-->
 
-  <div class="portfolio-grid">
-
+<div class="portfolio-grid">
     <div class="p-item" data-cat="dokumentar" data-src="bilder/mette-m.jpg" data-title="Tittel på bilde">
-      <div class="p-photo-bg p1"></div>
+      <img src="bilder/mette-m.jpg" class="p-photo-bg" style="object-fit:cover" alt="Tittel på bilde">
       <div class="p-hover">
         <span class="p-cat">Dokumentar</span>
         <div class="p-name">Tittel på bilde</div>
         <span class="p-zoom">⊕ Åpne</span>
       </div>
     </div>
-
-    <div class="p-item" data-cat="portrett" data-src="bilder/iman-meskini-jpg" data-title="Portrett">
-      <div class="p-photo-bg p2"></div>
+    <div class="p-item" data-cat="portrett" data-src="bilder/iman-meskini.jpg" data-title="Portrett">
+      <img src="bilder/iman-meskini.jpg" class="p-photo-bg" style="object-fit:cover" alt="Portrett">
       <div class="p-hover">
         <span class="p-cat">Portrett</span>
         <div class="p-name">Portrett</div>
         <span class="p-zoom">⊕ Åpne</span>
       </div>
     </div>
-
-    <div class="p-item" data-cat="musikk" data-src="" data-title="Konsertfotografi">
-      <div class="p-photo-bg p3"></div>
+    <div class="p-item" data-cat="musikk" data-src="bilder/stoltenberg.jpg" data-title="Konsertfotografi">
+      <img src="bilder/FILNAVN.jpg" class="p-photo-bg" style="object-fit:cover" alt="Konsertfotografi">
       <div class="p-hover">
         <span class="p-cat">Musikk</span>
         <div class="p-name">Konsertfotografi</div>
         <span class="p-zoom">⊕ Åpne</span>
       </div>
     </div>
-
-    <div class="p-item" data-cat="reportasje" data-src="" data-title="Reportasje">
-      <div class="p-photo-bg p4"></div>
+    <div class="p-item" data-cat="reportasje" data-src="bilder/FILNAVN.jpg" data-title="Reportasje">
+      <img src="bilder/FILNAVN.jpg" class="p-photo-bg" style="object-fit:cover" alt="Reportasje">
       <div class="p-hover">
         <span class="p-cat">Reportasje</span>
         <div class="p-name">Reportasje</div>
         <span class="p-zoom">⊕ Åpne</span>
       </div>
     </div>
-
-    <div class="p-item" data-cat="dokumentar" data-src="" data-title="Feltarbeid">
-      <div class="p-photo-bg p5"></div>
+    <div class="p-item" data-cat="dokumentar" data-src="bilder/FILNAVN.jpg" data-title="Feltarbeid">
+      <img src="bilder/FILNAVN.jpg" class="p-photo-bg" style="object-fit:cover" alt="Feltarbeid">
       <div class="p-hover">
         <span class="p-cat">Dokumentar</span>
         <div class="p-name">Feltarbeid</div>
         <span class="p-zoom">⊕ Åpne</span>
       </div>
     </div>
-
-    <div class="p-item" data-cat="musikk" data-src="" data-title="Kulturfoto">
-      <div class="p-photo-bg p6"></div>
+    <div class="p-item" data-cat="musikk" data-src="bilder/FILNAVN.jpg" data-title="Kulturfoto">
+      <img src="bilder/FILNAVN.jpg" class="p-photo-bg" style="object-fit:cover" alt="Kulturfoto">
       <div class="p-hover">
         <span class="p-cat">Musikk</span>
         <div class="p-name">Kulturfoto</div>
         <span class="p-zoom">⊕ Åpne</span>
       </div>
     </div>
-
   </div>
 </div>
 
