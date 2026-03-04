@@ -91,13 +91,14 @@ nav {
 .hero-photos { display: grid; grid-template-columns: 3fr 1.5fr 1.5fr 2fr; height: 55vh; min-height: 360px; }
 .hero-photo { position: relative; overflow: hidden; border-right: 1px solid var(--black); }
 .hero-photo:last-child { border-right: none; }
-.ph { width: 100%; height: 100%; display: flex; align-items: flex-end; padding: 1rem 1.2rem; position: relative; }
-.ph-1 { background: linear-gradient(170deg, #000 0%, #1a1a1a 40%, #333 70%, #111 100%); }
-.ph-2 { background: linear-gradient(170deg, #222 0%, #444 50%, #1a1a1a 100%); }
-.ph-3 { background: linear-gradient(170deg, #111 0%, #333 60%, #222 100%); }
-.ph-4 { background: linear-gradient(170deg, #1a1a1a 0%, #2a2a2a 40%, #000 100%); }
-.ph-label { font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
-.photo-num { position: absolute; top: 1rem; right: 1.2rem; font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.15em; color: rgba(255,255,255,0.2); }
+.hero-photo img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+.ph { width: 100%; height: 100%; display: flex; align-items: flex-end; padding: 1rem 1.2rem; position: relative; z-index: 1; }
+.ph-1 { background: linear-gradient(170deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 60%, transparent 100%); }
+.ph-2 { background: linear-gradient(170deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 60%, transparent 100%); }
+.ph-3 { background: linear-gradient(170deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 60%, transparent 100%); }
+.ph-4 { background: linear-gradient(170deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 60%, transparent 100%); }
+.ph-label { font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+.photo-num { position: absolute; top: 1rem; right: 1.2rem; font-family: var(--mono); font-size: 0.5rem; letter-spacing: 0.15em; color: rgba(255,255,255,0.4); }
 
 /* ── SECTION RULE ── */
 .section-rule {
