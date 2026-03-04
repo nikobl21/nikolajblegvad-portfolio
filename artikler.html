@@ -27,14 +27,24 @@ nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 200;
   background: var(--white); border-bottom: 2px solid var(--black);
   display: flex; justify-content: flex-end; align-items: center;
-  padding: 0 2rem; height: 52px; gap: 2.5rem;
+  padding: 0 2rem; height: 56px; gap: 0.6rem;
+  flex-wrap: wrap; overflow: hidden;
 }
 .nav-link {
-  font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.18em;
-  text-transform: uppercase; text-decoration: none; color: var(--black); transition: opacity 0.15s;
+  font-family: var(--mono); font-size: 0.65rem; font-weight: 400;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  text-decoration: none; color: var(--black);
+  padding: 0.5rem 1.1rem;
+  border: 1.5px solid var(--black);
+  transition: background 0.15s, color 0.15s;
+  white-space: nowrap;
 }
-.nav-link:hover { opacity: 0.35; }
-.nav-link.active { border-bottom: 1px solid var(--black); padding-bottom: 2px; }
+.nav-link:hover { background: var(--black); color: var(--white); }
+
+@media (max-width: 600px) {
+  nav { gap: 0.4rem; padding: 0 0.8rem; height: 56px; }
+  .nav-link { font-size: 0.55rem; padding: 0.4rem 0.7rem; letter-spacing: 0.08em; }
+}
 
 /* ── DATELINE ── */
 .dateline {
