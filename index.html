@@ -573,6 +573,7 @@ SLIK LEGGER DU TIL ET NYTT BILDE:
 </footer>
 
 <script>
+document.addEventListener('DOMContentLoaded', function() {
 // ── FILTER ──
 const filterBtns = document.querySelectorAll('.filter-btn');
 const items = document.querySelectorAll('.p-item');
@@ -685,4 +686,13 @@ document.addEventListener('keydown', e => {
 
 // Touch/swipe
 let touchStartX = 0;
-lb.addEventListener('touch
+lb.addEventListener('touch start', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+lb.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - touchStartX;
+  if (Math.abs(dx) > 50) navigate(dx < 0 ? 1 : -1);
+});
+
+}); // DOMContentLoaded
+</script>
+</body>
+</html>
