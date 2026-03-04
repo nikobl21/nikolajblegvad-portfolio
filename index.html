@@ -26,26 +26,22 @@ body { background: var(--white); color: var(--black); font-family: var(--serif);
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 200;
   background: var(--white); border-bottom: 2px solid var(--black);
-  display: grid; grid-template-columns: 1fr auto 1fr;
-  align-items: center; padding: 0 2rem; height: 52px;
+  display: flex; justify-content: flex-end; align-items: center;
+  padding: 0 2rem; height: 56px; gap: 2rem;
 }
-.nav-left { display: flex; gap: 2rem; }
-.nav-center {
-  font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.22em;
-  text-transform: uppercase; text-align: center;
-  border-left: 1px solid var(--black); border-right: 1px solid var(--black);
-  padding: 0 2rem; height: 52px; display: flex; align-items: center;
-}
-.nav-right { display: flex; justify-content: flex-end; gap: 2rem; }
 .nav-link {
-  font-family: var(--mono); font-size: 0.7rem; font-weight: bold; letter-spacing: 0.18em;
-  text-transform: uppercase; text-decoration: underline; color: var(--black); transition: opacity 0.15s;
+  font-family: var(--mono); font-size: 0.65rem; font-weight: 400;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  text-decoration: none; color: var(--black);
+  padding: 0.5rem 1.1rem;
+  border: 1.5px solid var(--black);
+  transition: background 0.15s, color 0.15s;
 }
-.nav-link:hover { opacity: 0.35; }
+.nav-link:hover { background: var(--black); color: var(--white); }
 
 /* ── DATELINE ── */
 .dateline {
-  margin-top: 52px; border-bottom: 1px solid var(--black);
+  margin-top: 56px; border-bottom: 1px solid var(--black);
   display: flex; justify-content: space-between; align-items: center;
   padding: 0.45rem 2rem; background: var(--black); color: var(--white);
 }
@@ -299,8 +295,7 @@ footer { background: var(--black); color: var(--white); padding: 1.5rem 2rem; di
 
 /* ── RESPONSIVE ── */
 @media (max-width: 800px) {
-  nav { grid-template-columns: 1fr 1fr; }
-  .nav-center { display: none; }
+  nav { gap: 1.5rem; padding: 0 1.2rem; }
   .hero-masthead { grid-template-columns: 1fr; }
   .hero-col-side { border-right: none; border-bottom: 1px solid var(--black); }
   .hero-col-side:last-child { border-left: none; }
@@ -326,21 +321,15 @@ footer { background: var(--black); color: var(--white); padding: 1.5rem 2rem; di
 
 <!-- NAV -->
 <nav>
-  <div class="nav-left">
-    
-  </div>
-  <div class="nav-center">Nikolaj Blegvad &nbsp;·&nbsp; Oslo</div>
-  <div class="nav-right">
-    <a href="#portfolio" class="nav-link">Foto</a>
-    <a href="artikler.html" class="nav-link">Tekst</a>
-    <a href="#about" class="nav-link">Om</a>
-    <a href="#contact" class="nav-link">Kontakt</a>
-  </div>
+  <a href="#portfolio" class="nav-link">Foto</a>
+  <a href="artikler.html" class="nav-link">Tekst</a>
+  <a href="#about" class="nav-link">Om</a>
+  <a href="#contact" class="nav-link">Kontakt</a>
 </nav>
 
 <!-- DATELINE -->
 <div class="dateline">
-  <span class="dateline-text">Fotograf & Journalist &nbsp;·&nbsp; Oslo, Norge</span>
+  <span class="dateline-text">Oslo, Norge</span>
   <span class="dateline-text">Leverer til presse, bedrifter og private</span>
   <span class="dateline-text">Tilgjengelig for oppdrag</span>
 </div>
@@ -354,8 +343,8 @@ footer { background: var(--black); color: var(--white); padding: 1.5rem 2rem; di
         <p class="side-note">Historier fortalt med fotografi, video, tekst og lyd. Fra konsertsal til gateplan.</p>
       </div>
       <div class="side-stat">
-        <span class="side-stat-num">+15</span>
-        <span class="side-stat-label">Års erfaring</span>
+        <span class="side-stat-num">15+</span>
+        <span class="side-stat-label">År erfaring</span>
       </div>
     </div>
     <div class="hero-col-center">
@@ -387,7 +376,7 @@ footer { background: var(--black); color: var(--white); padding: 1.5rem 2rem; di
 <!-- PORTFOLIO -->
 <div id="portfolio">
   <div class="section-rule">
-    <span class="section-rule-num">§ 01</span>
+    <span class="section-rule-num">01</span>
     <span class="section-rule-title">Utvalgte fotografier</span>
     <div class="section-rule-line"></div>
   </div>
@@ -502,33 +491,33 @@ footer { background: var(--black); color: var(--white); padding: 1.5rem 2rem; di
 <!-- JOURNALISM -->
 <div id="journalism">
   <div class="section-rule">
-    <span class="section-rule-num">§ 02</span>
-    <span class="section-rule-title">Journalistikk & tekst</span>
+    <span class="section-rule-num">02</span>
+    <span class="section-rule-title">Tekst</span>
     <div class="section-rule-line"></div>
   </div>
   <div class="articles">
-    <a class="article" href="#">
-      <div class="article-meta"><span class="article-pub">Deichman Musikk</span><span class="article-date">2024</span></div>
-      <div class="article-headline">Erling Aksdal: Pianisten som aldri slutter å søke</div>
-      <div class="article-dek">En samtale med en av norsk jazz' mest originale stemmer — om improvisasjon, taushet og det å finne sitt eget språk.</div>
+    <a class="article" href="https://medium.com/@nikolajblegvad/derfor-er-det-lurt-å-løpe-langsomt-8f9a6a2d0686" target="_blank" rel="noopener">
+      <div class="article-meta"><span class="article-pub">Medium</span><span class="article-date">2019</span></div>
+      <div class="article-headline">Derfor er det lurt å løpe langsomt</div>
+      <div class="article-dek">Å løpe langsomt kan være en bevisst strategi hvis du vil begynne med løpetreningen. Det kan også være et valg for den mer erfarne løperen som ønsker å nyte løpeturen uten alt for høy puls.</div>
       <div class="article-read">Les artikkel</div>
     </a>
-    <a class="article" href="#">
-      <div class="article-meta"><span class="article-pub">Deichman Musikk</span><span class="article-date">2024</span></div>
-      <div class="article-headline">Ny norsk folkemusikk: tradisjon møter eksperiment</div>
-      <div class="article-dek">Unge musikere bærer arven fra hardingfele og langeleik inn i en ny tid. Et portrett av en genre i bevegelse.</div>
+    <a class="article" href="https://musikk.deichman.no/2013/07/07/roskilde-2013-pinkunoizu-sjaeldent-at-vi-siger-skal-vi-ikke-lave-et-countrynummer/" target="_blank" rel="noopener">
+      <div class="article-meta"><span class="article-pub">Deichman Musikk</span><span class="article-date">2013</span></div>
+      <div class="article-headline">Pinkunoizu – Sjældent at vi siger "Skal vi ikke lave et countrynummer?"</div>
+      <div class="article-dek">De har begge spillet på Roskilde Festival tidligere med andre bands som Sort Stue og Le Fiasko, men i år er det første gang, de spiller på festivalen som Pinkunoizu.</div>
       <div class="article-read">Les artikkel</div>
     </a>
-    <a class="article" href="#">
-      <div class="article-meta"><span class="article-pub">Deichman Musikk</span><span class="article-date">2023</span></div>
-      <div class="article-headline">Lydbøker som kunst: da litteraturen begynte å høres</div>
-      <div class="article-dek">Innlesning som tolkning — om hva som skjer med en tekst når stemmen tar over der øyet slutter.</div>
+    <a class="article" href="https://musikk.deichman.no/2013/05/15/om-a-befinne-seg-i-et-vakuum-i-limbo-i-ingenmannsland/" target="_blank" rel="noopener">
+      <div class="article-meta"><span class="article-pub">Deichman Musikk</span><span class="article-date">2013</span></div>
+      <div class="article-headline">Domene: Om å befinne seg i et vakuum, i limbo, i ingenmannsland</div>
+      <div class="article-dek">I sin forrige glansperiode gjennomførte bandet en serie konserter på Vestfold-scener samt spilte på festivaler. Nå har bandet for lengst byttet hovedbase til Oslo.</div>
       <div class="article-read">Les artikkel</div>
     </a>
-    <a class="article" href="#">
-      <div class="article-meta"><span class="article-pub">Deichman Musikk</span><span class="article-date">2023</span></div>
-      <div class="article-headline">Festspillene i Bergen: Musikk mellom fjordene</div>
-      <div class="article-dek">En reportasje fra Norges viktigste musikkfestival — om programmet, publikummet og det uforutsigbare i live-musikk.</div>
+    <a class="article" href="https://artikler.nikolajblegvad.com/Promoe/batty-lyrics.html" target="_blank" rel="noopener">
+      <div class="article-meta"><span class="article-pub">Rapspot.dk</span><span class="article-date">2007</span></div>
+      <div class="article-headline">Homofobi, Queer Jihad og Batty Lyrics</div>
+      <div class="article-dek">Artikkel om homofobi i hip hop og reggae med refleksjoner fra Promoe om problematikken med samarbeid med artister som har hatfulle tekster.</div>
       <div class="article-read">Les artikkel</div>
     </a>
   </div>
@@ -542,7 +531,7 @@ footer { background: var(--black); color: var(--white); padding: 1.5rem 2rem; di
   </div>
   <div class="about-right">
     <div class="section-rule">
-      <span class="section-rule-num">§ 03</span>
+      <span class="section-rule-num">03</span>
       <span class="section-rule-title">Om</span>
       <div class="section-rule-line"></div>
     </div>
